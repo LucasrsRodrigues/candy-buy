@@ -1,1 +1,1 @@
-<h1 style='text-align: center;'>🚧 Doki Doki 🚀 Em construção... 🚧</h1>
+<h1 style='text-align: center;'>🚧 Doki-Doki em construção... 🚧</h1>
