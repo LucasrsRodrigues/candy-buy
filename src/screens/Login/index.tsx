@@ -12,8 +12,12 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { DokiButton } from '@components/DokiButton';
 
 import * as S from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export function Login() {
+  const { navigate } = useNavigation();
+
+
   return (
     <S.LoginSafe>
       <S.LoginContainer>
@@ -52,7 +56,7 @@ export function Login() {
 
         <DokiButton label="Login" />
 
-        <S.LoginForgotButton>
+        <S.LoginForgotButton onPress={() => navigate('SignUpFullName')}>
           <S.LoginForgotButtonText>Don't have an account? Sign Up</S.LoginForgotButtonText>
         </S.LoginForgotButton>
       </S.LoginContainer>

@@ -35,6 +35,7 @@ export function Dokinput({ name, leftIcon, rightIcon, ...props }: DokinputProps)
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         autoCapitalize='none'
+        placeholderTextColor='#66615C'
         {...props}
       />
 

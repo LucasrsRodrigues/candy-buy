@@ -1,0 +1,39 @@
+import React from 'react';
+
+import LogoSvg from '@assets/images/logo.svg';
+import Doki from '@assets/images/doki-doki/loginChild.svg';
+
+import fullNameIcon from '@assets/icons/full_name/full_name.png';
+
+import * as S from './styles';
+import { Dokinput } from '@components/DokInput';
+import { DokiButton } from '@components/DokiButton';
+import { useNavigation } from '@react-navigation/native';
+
+export function FullName() {
+  const { navigate } = useNavigation();
+
+  return (
+    <S.SignUpSafe>
+      <S.SignUpContainer>
+        <LogoSvg width={160} height={32} />
+        <Doki width={250} height={250} />
+
+        <S.SignUpWrapper>
+          <S.SignUpTitle>Welcome to Doki Doki</S.SignUpTitle>
+          <S.SignUpText>Let’s start with the basic details. First things first, what sould we call you</S.SignUpText>
+        </S.SignUpWrapper>
+
+        <Dokinput name="full_name" placeholder='Full Name' leftIcon={fullNameIcon} />
+
+        <S.SignUpWrapper>
+          <DokiButton label="Next" onPress={() => navigate('EmailAddress')} />
+
+          <S.SignUpButton onPress={() => navigate('Login')}>
+            <S.SignUpButtonText>Already registered? Login</S.SignUpButtonText>
+          </S.SignUpButton>
+        </S.SignUpWrapper>
+      </S.SignUpContainer>
+    </S.SignUpSafe>
+  );
+}

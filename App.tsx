@@ -17,11 +17,8 @@ import {
 
 import { useFonts } from 'expo-font';
 
-import Onboarding from './src/screens/Onboarding';
 import SplashScreen from './src/screens/SplashScreen';
-import { Login } from './src/screens/Login';
-import { ForgotPassword } from '@screens/ForgotPassword';
-import { EmailSent } from '@screens/EmailSent';
+import Routes from 'src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -45,7 +42,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <EmailSent />
+      <Routes />
     </ThemeProvider>
   );
 }

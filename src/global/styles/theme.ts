@@ -61,6 +61,7 @@ export default {
     typography_title: '#403B36',
     typography_subtitle: '#4D4741',
     typography_paragraph: '#5C554E',
+    typography_caption: '#66615C',
   },
   fonts: {
     body_regular: 'Nunito_400Regular',

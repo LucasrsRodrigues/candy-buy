@@ -7,17 +7,16 @@ export const OnboardingSafe = styled.SafeAreaView`
 `;
 
 export const OnboardingContainer = styled.View`
-  flex: 1;
-  padding:  28px;
+  flex: 3;
+  /* padding:  28px; */
   align-items: center;
 `;
 
 
 export const OnboardingTitle = styled.Text``;
 
-
 export const RenderSlidesContainer = styled.View`
-  /* flex: 1; */
+  flex: 1;
   align-items: center;
 `;
 
