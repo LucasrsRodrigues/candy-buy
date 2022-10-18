@@ -7,6 +7,7 @@ import UserIcon from '@assets/images/user-icon.svg';
 import * as S from './styles';
 import { RFValue } from 'react-native-responsive-fontsize';
 import HeartSvg from '@assets/images/heart.svg';
+import { useNavigation } from '@react-navigation/native';
 
 const candies = [
   {
@@ -34,9 +35,11 @@ const candies = [
     id: '5',
     image: require('@assets/images/candies/shake/Shake.png')
   },
-]
+];
 
 export function Home() {
+  const { navigate } = useNavigation();
+
   return (
     <S.HomeSafe>
       <S.HomeContainer>
@@ -66,7 +69,7 @@ export function Home() {
         <S.HomeSection>
           <S.HomeHero>Nearby Restaurants</S.HomeHero>
 
-          <S.HomeRestaurantCard>
+          <S.HomeRestaurantCard onPress={() => navigate('Restaurant')} activeOpacity={0.8}>
             <S.HomeRestaurantCardImage source={require('@assets/images/restaurants/donuts-shop/Donut.png')} />
 
             <S.HomeRestaurantCardInfos>

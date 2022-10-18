@@ -59,7 +59,7 @@ export const HomeCandyImage = styled.Image`
 `;
 
 
-export const HomeRestaurantCard = styled.View`
+export const HomeRestaurantCard = styled.TouchableOpacity`
   background: ${({ theme }) => theme.colors.white};
   padding: 16px;
   margin-right: 20px;

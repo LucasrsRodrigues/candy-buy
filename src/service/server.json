@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "c23d2527-c1a2-4da6-ac7c-97f9ec24ad20",
+      "name": "lucas rodrigues santos",
+      "email": "email@email.com",
+      "cpf": "510.669.200-87",
+      "token": "b1213ee0-4e76-11ed-bdc3-0242ac120002"
+    }
+  ]
+}
