@@ -6,9 +6,9 @@ import Doki from '@assets/images/doki-doki/forgotPasswordChild.svg';
 import phoneIcon from '@assets/icons/phone/phone.png';
 
 import * as S from './styles';
-import { Dokinput } from '@components/DokInput';
 import { DokiButton } from '@components/DokiButton';
 import { useNavigation } from '@react-navigation/native';
+import { DokiInput } from '@components/DokiInput';
 
 export function Phone() {
   const { navigate, goBack } = useNavigation();
@@ -24,7 +24,7 @@ export function Phone() {
           <S.SignUpText>Share your number with us, but we don’t share it with anyone else</S.SignUpText>
         </S.SignUpWrapper>
 
-        <Dokinput name="phone" placeholder='Ex. (11) 999999999' leftIcon={phoneIcon} />
+        <DokiInput name="phone" placeholder='Ex. (11) 999999999' leftIcon={phoneIcon} />
 
         <S.SignUpWrapper>
           <DokiButton label="Next" onPress={() => navigate('Code')} />

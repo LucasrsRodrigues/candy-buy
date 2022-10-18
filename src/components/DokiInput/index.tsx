@@ -3,13 +3,13 @@ import { TextInputProps, Image, Text, ImageSourcePropType } from 'react-native';
 
 import * as S from './styles';
 
-interface DokinputProps extends TextInputProps {
+interface DokiInputProps extends TextInputProps {
   name: string;
   leftIcon?: ImageSourcePropType;
   rightIcon?: ImageSourcePropType;
 }
 
-export function Dokinput({ name, leftIcon, rightIcon, ...props }: DokinputProps) {
+export function DokiInput({ name, leftIcon, rightIcon, ...props }: DokiInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const error = false;
 

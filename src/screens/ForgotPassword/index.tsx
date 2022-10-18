@@ -1,5 +1,4 @@
 import React from 'react';
-import { Dokinput } from '@components/DokInput';
 
 import LogoSvg from '@assets/images/logo.svg';
 
@@ -12,6 +11,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { DokiButton } from '@components/DokiButton';
 
 import * as S from './styles';
+import { DokiInput } from '@components/DokiInput';
 
 export function ForgotPassword() {
   return (
@@ -33,7 +33,7 @@ export function ForgotPassword() {
         </S.ForgotPasswordLorem>
 
         <S.ForgotPasswordForm>
-          <Dokinput
+          <DokiInput
             name="email"
             leftIcon={mailIcon}
             placeholder='Email Address'

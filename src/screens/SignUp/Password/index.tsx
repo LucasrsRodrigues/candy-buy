@@ -6,9 +6,9 @@ import Doki from '@assets/images/doki-doki/doki-note.svg';
 import lockIcon from '@assets/icons/lock/lock.png';
 
 import * as S from './styles';
-import { Dokinput } from '@components/DokInput';
 import { DokiButton } from '@components/DokiButton';
 import { useNavigation } from '@react-navigation/native';
+import { DokiInput } from '@components/DokiInput';
 
 export function Password() {
   const { navigate, goBack } = useNavigation();
@@ -24,7 +24,7 @@ export function Password() {
           <S.SignUpText>Great, let’s choose a very strong password to keep your account safe from bad people out there </S.SignUpText>
         </S.SignUpWrapper>
 
-        <Dokinput name="password" placeholder='Password' leftIcon={lockIcon} />
+        <DokiInput name="password" placeholder='Password' leftIcon={lockIcon} />
 
         <S.SignUpWrapper>
           <DokiButton label="Next" onPress={() => navigate('Phone')} />

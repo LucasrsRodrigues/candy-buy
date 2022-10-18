@@ -19,6 +19,7 @@ import { useFonts } from 'expo-font';
 
 import SplashScreen from './src/screens/SplashScreen';
 import Routes from 'src/routes';
+import { AuthProvider } from 'src/hooks/auth.hook';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -42,7 +43,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </ThemeProvider>
   );
 }

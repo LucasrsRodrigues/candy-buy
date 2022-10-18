@@ -6,9 +6,9 @@ import Doki from '@assets/images/doki-doki/loginChild.svg';
 import fullNameIcon from '@assets/icons/full_name/full_name.png';
 
 import * as S from './styles';
-import { Dokinput } from '@components/DokInput';
 import { DokiButton } from '@components/DokiButton';
 import { useNavigation } from '@react-navigation/native';
+import { DokiInput } from '@components/DokiInput';
 
 export function FullName() {
   const { navigate } = useNavigation();
@@ -24,7 +24,7 @@ export function FullName() {
           <S.SignUpText>Let’s start with the basic details. First things first, what sould we call you</S.SignUpText>
         </S.SignUpWrapper>
 
-        <Dokinput name="full_name" placeholder='Full Name' leftIcon={fullNameIcon} />
+        <DokiInput name="full_name" placeholder='Full Name' leftIcon={fullNameIcon} />
 
         <S.SignUpWrapper>
           <DokiButton label="Next" onPress={() => navigate('EmailAddress')} />

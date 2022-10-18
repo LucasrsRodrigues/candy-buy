@@ -1,5 +1,4 @@
 import React from 'react';
-import { Dokinput } from '@components/DokInput';
 
 import LogoSvg from '@assets/images/logo.svg';
 
@@ -13,10 +12,19 @@ import { DokiButton } from '@components/DokiButton';
 
 import * as S from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from 'src/hooks/auth.hook';
+import { DokiInput } from '@components/DokiInput';
 
 export function Login() {
   const { navigate } = useNavigation();
+  const { signIn } = useAuth();
 
+  const loginFunction = async () => {
+    await signIn({
+      email: 'email@email.com',
+      password: '123456'
+    });
+  };
 
   return (
     <S.LoginSafe>
@@ -36,13 +44,13 @@ export function Login() {
         </S.LoginLorem>
 
         <S.LoginForm>
-          <Dokinput
+          <DokiInput
             name="email"
             leftIcon={mailIcon}
             placeholder='Email Address'
           />
 
-          <Dokinput
+          <DokiInput
             name="password"
             secureTextEntry={true}
             leftIcon={lockIcon}
@@ -54,7 +62,7 @@ export function Login() {
           </S.LoginForgotButton>
         </S.LoginForm>
 
-        <DokiButton label="Login" />
+        <DokiButton label="Login" onPress={loginFunction} />
 
         <S.LoginForgotButton onPress={() => navigate('SignUpFullName')}>
           <S.LoginForgotButtonText>Don't have an account? Sign Up</S.LoginForgotButtonText>

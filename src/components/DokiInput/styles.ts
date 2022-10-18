@@ -9,9 +9,10 @@ interface ContainerProps {
 }
 
 export const DokInputContainer = styled.View<ContainerProps>`
-  width: 100%;
+  /* width: 100%; */
+  flex: 1;
   background: ${({ theme }) => theme.colors.white};
-  height: 64px;
+  height: ${RFValue(64)}px;
 
   border: 2px solid ${({ theme }) => theme.colors.grey_05};
   border-radius: 16px;
