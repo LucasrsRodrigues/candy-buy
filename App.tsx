@@ -20,6 +20,8 @@ import { useFonts } from 'expo-font';
 import SplashScreen from './src/screens/SplashScreen';
 import Routes from 'src/routes';
 import { AuthProvider } from 'src/hooks/auth.hook';
+import { CartProvider } from 'src/hooks/cart.hook';
+import { CartDiv } from '@components/CartDiv';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -44,7 +46,9 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <AuthProvider>
-        <Routes />
+        <CartProvider>
+          <Routes />
+        </CartProvider>
       </AuthProvider>
     </ThemeProvider>
   );

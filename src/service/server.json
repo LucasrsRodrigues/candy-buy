@@ -7,5 +7,49 @@
       "cpf": "510.669.200-87",
       "token": "b1213ee0-4e76-11ed-bdc3-0242ac120002"
     }
+  ],
+  "itens": [
+    {
+      "id": "0",
+      "name": "Classic Donut",
+      "image": "",
+      "price": 3.99
+    },
+    {
+      "id": "1",
+      "name": "Chocolate n Cream",
+      "image": "",
+      "price": 3.99
+    },
+    {
+      "id": "2",
+      "name": "Classic Red",
+      "image": "",
+      "price": 3.99
+    },
+    {
+      "id": "3",
+      "name": "Classic Purple",
+      "image": "",
+      "price": 3.99
+    },
+    {
+      "id": "4",
+      "name": "Broken Heart",
+      "image": "",
+      "price": 3.99
+    },
+    {
+      "id": "5",
+      "name": "Green Vanilla",
+      "image": "",
+      "price": 3.99
+    },
+    {
+      "id": "6",
+      "name": "Space Blue",
+      "image": "",
+      "price": 3.99
+    }
   ]
 }

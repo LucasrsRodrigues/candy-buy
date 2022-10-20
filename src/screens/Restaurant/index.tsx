@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import LeftArrow from '@assets/icons/left-arrow/left-arrow.png';
@@ -8,8 +8,24 @@ import Unicorn from '@assets/images/random/unicorn.svg';
 
 import * as S from './styles';
 import { DokiButton } from '@components/DokiButton';
+import { useCart } from 'src/hooks/cart.hook';
+import api from 'src/service/api';
+import { ItemCart } from '@components/ItemCart';
 
 export function Restaurant() {
+  const [itens, setItens] = useState([]);
+  const { addCartItem } = useCart();
+
+  async function getItens() {
+    const response = await api.get('/itens');
+
+    setItens(response.data);
+  }
+
+  useEffect(() => {
+    getItens();
+  }, []);
+
   return (
     <S.RestaurantSafe>
       <S.RestaurantContainer>
@@ -39,18 +55,10 @@ export function Restaurant() {
         <S.RestaurantBestsellers>
           <S.RestaurantBestsellersTitle>Bestsellers</S.RestaurantBestsellersTitle>
 
-          <S.ItemCard>
-            <S.ItemCardImage />
+          {itens.map(iten => (
+            <ItemCart key={iten.id} product={iten} />
+          ))}
 
-            <S.ItemCardInfos>
-              <S.ItemCardTitle>Classic Donut</S.ItemCardTitle>
-              <S.ItemCardPrice>R$ 3.99 x1</S.ItemCardPrice>
-            </S.ItemCardInfos>
-
-            <S.ItemCardButton>
-              <S.ItemCardButtonText>Add</S.ItemCardButtonText>
-            </S.ItemCardButton>
-          </S.ItemCard>
         </S.RestaurantBestsellers>
       </S.RestaurantContainer>
     </S.RestaurantSafe>
