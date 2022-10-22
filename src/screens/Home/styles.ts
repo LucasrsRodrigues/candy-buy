@@ -18,6 +18,8 @@ export const HomeHeader = styled.View`
 
 `;
 
+export const HomeHeaderButton = styled.TouchableOpacity``;
+
 export const HomeSection = styled.View`
   padding-left: 20px;
   margin-top: 28px;

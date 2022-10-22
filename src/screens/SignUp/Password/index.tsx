@@ -3,7 +3,7 @@ import React from 'react';
 import LogoSvg from '@assets/images/logo.svg';
 import Doki from '@assets/images/doki-doki/doki-note.svg';
 
-import lockIcon from '@assets/icons/lock/lock.png';
+// import lockIcon from '@assets/icons/lock/lock.png';
 
 import * as S from './styles';
 import { DokiButton } from '@components/DokiButton';
@@ -24,7 +24,7 @@ export function Password() {
           <S.SignUpText>Great, let’s choose a very strong password to keep your account safe from bad people out there </S.SignUpText>
         </S.SignUpWrapper>
 
-        <DokiInput name="password" placeholder='Password' leftIcon={lockIcon} />
+        {/* <DokiInput name="password" placeholder='Password' leftIcon={lockIcon} /> */}
 
         <S.SignUpWrapper>
           <DokiButton label="Next" onPress={() => navigate('Phone')} />

@@ -3,7 +3,7 @@ import React from 'react';
 import LogoSvg from '@assets/images/logo.svg';
 import Doki from '@assets/images/doki-doki/doki-like.svg';
 
-import phoneIcon from '@assets/icons/phone/phone.png';
+// import phoneIcon from '@assets/icons/phone/phone.png';
 
 import * as S from './styles';
 import { Dokinput } from '@components/DokInput';

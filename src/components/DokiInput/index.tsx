@@ -1,15 +1,16 @@
 import React, { useCallback, useState } from 'react';
 import { TextInputProps, Image, Text, ImageSourcePropType } from 'react-native';
+import { SvgProps } from 'react-native-svg';
 
 import * as S from './styles';
 
 interface DokiInputProps extends TextInputProps {
   name: string;
-  leftIcon?: ImageSourcePropType;
-  rightIcon?: ImageSourcePropType;
+  leftIcon?: React.FC<SvgProps>;
+  rightIcon?: React.FC<SvgProps>;
 }
 
-export function DokiInput({ name, leftIcon, rightIcon, ...props }: DokiInputProps) {
+export function DokiInput({ name, leftIcon: LeftIcon, rightIcon: RightIcon, ...props }: DokiInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const error = false;
 
@@ -26,8 +27,8 @@ export function DokiInput({ name, leftIcon, rightIcon, ...props }: DokiInputProp
   return (
     <S.DokInputContainer isFocused={isFocused} isErrored={!!error}>
 
-      {leftIcon && (
-        <S.DockInputImage source={leftIcon} />
+      {LeftIcon && (
+        <LeftIcon />
       )}
 
       {/* Icone */}
@@ -39,8 +40,8 @@ export function DokiInput({ name, leftIcon, rightIcon, ...props }: DokiInputProp
         {...props}
       />
 
-      {rightIcon && (
-        <S.DockInputImage source={rightIcon} />
+      {RightIcon && (
+        <RightIcon />
       )}
     </S.DokInputContainer>
   );

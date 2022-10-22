@@ -1,10 +1,28 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
-export const Button = styled.TouchableOpacity`
-  width: 100%;
-  background: ${({ theme }) => theme.colors.orange_60};
+interface ButtonProps {
+  type: 'bold' | 'outline';
+}
+
+export const Button = styled.TouchableOpacity<ButtonProps>`
+  /* width: 100%; */
   padding: 19.5px;
   border-radius: 12px;
+
+  background: #fff;
+
+  ${props => props.type === 'bold' && css`background: ${({ theme }) => theme.colors.orange_60};`}
+
+  ${props => props.type === 'outline' && css`
+    border: 4px solid ${({ theme }) => theme.colors.orange_60};
+  `};
+
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const ButtonIcon = styled.Image`
+  /* filter: brightness(0) invert(1); */
 `;
 
 export const ButtonText = styled.Text`

@@ -3,7 +3,7 @@ import React from 'react';
 import LogoSvg from '@assets/images/logo.svg';
 import Doki from '@assets/images/doki-doki/forgotPasswordChild.svg';
 
-import phoneIcon from '@assets/icons/phone/phone.png';
+// import phoneIcon from '@assets/icons/phone/phone.svg';
 
 import * as S from './styles';
 import { DokiButton } from '@components/DokiButton';
@@ -24,7 +24,7 @@ export function Phone() {
           <S.SignUpText>Share your number with us, but we don’t share it with anyone else</S.SignUpText>
         </S.SignUpWrapper>
 
-        <DokiInput name="phone" placeholder='Ex. (11) 999999999' leftIcon={phoneIcon} />
+        {/* <DokiInput name="phone" placeholder='Ex. (11) 999999999' leftIcon={phoneIcon} /> */}
 
         <S.SignUpWrapper>
           <DokiButton label="Next" onPress={() => navigate('Code')} />

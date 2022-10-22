@@ -2,8 +2,8 @@ import React from 'react';
 
 import LogoSvg from '@assets/images/logo.svg';
 
-import mailIcon from '@assets/icons/mail/mail.png';
-import lockIcon from '@assets/icons/lock/lock.png';
+// import mailIcon from '@assets/icons/mail/mail.png';
+// import lockIcon from '@assets/icons/lock/lock.png';
 
 import LoginChildSvg from '@assets/images/doki-doki/loginChild.svg';
 
@@ -44,7 +44,7 @@ export function Login() {
         </S.LoginLorem>
 
         <S.LoginForm>
-          <DokiInput
+          {/* <DokiInput
             name="email"
             leftIcon={mailIcon}
             placeholder='Email Address'
@@ -55,7 +55,7 @@ export function Login() {
             secureTextEntry={true}
             leftIcon={lockIcon}
             placeholder='Password'
-          />
+          /> */}
 
           <S.LoginForgotButton>
             <S.LoginForgotButtonText>Forgot Password?</S.LoginForgotButtonText>

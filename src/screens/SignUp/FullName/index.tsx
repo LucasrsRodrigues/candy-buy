@@ -3,7 +3,7 @@ import React from 'react';
 import LogoSvg from '@assets/images/logo.svg';
 import Doki from '@assets/images/doki-doki/loginChild.svg';
 
-import fullNameIcon from '@assets/icons/full_name/full_name.png';
+// import fullNameIcon from '@assets/icons/full_name/full_name.png';
 
 import * as S from './styles';
 import { DokiButton } from '@components/DokiButton';
@@ -24,7 +24,7 @@ export function FullName() {
           <S.SignUpText>Let’s start with the basic details. First things first, what sould we call you</S.SignUpText>
         </S.SignUpWrapper>
 
-        <DokiInput name="full_name" placeholder='Full Name' leftIcon={fullNameIcon} />
+        {/* <DokiInput name="full_name" placeholder='Full Name' leftIcon={fullNameIcon} /> */}
 
         <S.SignUpWrapper>
           <DokiButton label="Next" onPress={() => navigate('EmailAddress')} />

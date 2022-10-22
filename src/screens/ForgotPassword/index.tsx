@@ -2,16 +2,16 @@ import React from 'react';
 
 import LogoSvg from '@assets/images/logo.svg';
 
-import mailIcon from '@assets/icons/mail/mail.png';
-import lockIcon from '@assets/icons/lock/lock.png';
+// import mailIcon from '@assets/icons/mail/mail.png';
+// import lockIcon from '@assets/icons/lock/lock.png';
 
 import ForgotPasswordChildSvg from '@assets/images/doki-doki/forgotPasswordChild.svg';
 
 import { RFValue } from 'react-native-responsive-fontsize';
 import { DokiButton } from '@components/DokiButton';
 
-import * as S from './styles';
 import { DokiInput } from '@components/DokiInput';
+import * as S from './styles';
 
 export function ForgotPassword() {
   return (
@@ -33,11 +33,11 @@ export function ForgotPassword() {
         </S.ForgotPasswordLorem>
 
         <S.ForgotPasswordForm>
-          <DokiInput
+          {/* <DokiInput
             name="email"
             leftIcon={mailIcon}
             placeholder='Email Address'
-          />
+          /> */}
         </S.ForgotPasswordForm>
 
         <DokiButton label="Send Link" />

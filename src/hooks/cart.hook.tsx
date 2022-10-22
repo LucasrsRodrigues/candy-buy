@@ -1,6 +1,7 @@
 // import { CartDiv } from "@components/CartDiv";
 import { CartDiv } from "@components/CartDiv";
-import { createContext, ReactNode, useCallback, useContext, useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { createContext, ReactNode, useCallback, useContext, useEffect, useState } from "react";
 
 interface CartProviderProps {
   children: ReactNode;
@@ -8,8 +9,9 @@ interface CartProviderProps {
 
 interface CartContextData {
   addCartItem: (newIten: Itens) => void;
-  quantityItens: number;
   itens: Array<Itens>;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 interface Itens {
@@ -23,16 +25,16 @@ interface Itens {
 const CartContext = createContext({} as CartContextData);
 
 function CartProvider({ children }: CartProviderProps) {
-  const [quantityItens, setQuantityItens] = useState(0);
   const [itens, setItens] = useState<Itens[]>([]);
+  const [show, setShow] = useState(false);
 
   function addCartItem(newIten: Itens) {
     setItens([...itens, newIten]);
-    setQuantityItens(quantityItens++);
   }
 
+
   return (
-    <CartContext.Provider value={{ addCartItem, quantityItens, itens }}>
+    <CartContext.Provider value={{ addCartItem, show, setShow, itens }}>
       {children}
     </CartContext.Provider>
   );

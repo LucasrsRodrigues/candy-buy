@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { RFValue } from 'react-native-responsive-fontsize';
 
-import LeftArrow from '@assets/icons/left-arrow/left-arrow.png';
-import HeartIcon from '@assets/images/heart.svg';
 import Unicorn from '@assets/images/random/unicorn.svg';
-
-
-import * as S from './styles';
-import { DokiButton } from '@components/DokiButton';
-import { useCart } from 'src/hooks/cart.hook';
-import api from 'src/service/api';
+import { InternalHeader } from '@components/InternalHeader';
 import { ItemCart } from '@components/ItemCart';
+
+import { useCart } from 'src/hooks/cart.hook';
+
+import api from 'src/service/api';
+import * as S from './styles';
+
 
 export function Restaurant() {
   const [itens, setItens] = useState([]);
@@ -29,17 +27,7 @@ export function Restaurant() {
   return (
     <S.RestaurantSafe>
       <S.RestaurantContainer>
-        <S.RestaurantHeader>
-          <S.RestaurantBackButton>
-            <S.RestaurantImage source={LeftArrow} />
-          </S.RestaurantBackButton>
-
-          <S.RestaurantHeaderTitle>Donuts</S.RestaurantHeaderTitle>
-
-          <S.RestaurantBackButton>
-            <HeartIcon width={RFValue(24.64)} height={RFValue(18.75)} />
-          </S.RestaurantBackButton>
-        </S.RestaurantHeader>
+        <InternalHeader label="Donuts" showHeart={true} />
 
         <S.RestaurantCard>
           <S.RestaurantWrapper>
@@ -56,9 +44,13 @@ export function Restaurant() {
           <S.RestaurantBestsellersTitle>Bestsellers</S.RestaurantBestsellersTitle>
 
           {itens.map(iten => (
-            <ItemCart key={iten.id} product={iten} />
+            <ItemCart
+              key={iten.id}
+              product={iten}
+              image={iten.image}
+            />
           ))}
-
+          {/* '@assets/foods/Super_Simple.png' */}
         </S.RestaurantBestsellers>
       </S.RestaurantContainer>
     </S.RestaurantSafe>

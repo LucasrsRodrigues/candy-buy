@@ -1,6 +1,7 @@
 import React from 'react';
 import { DokiInput } from '@components/DokiInput';
-import searchIcon from '@assets/icons/search/search.png';
+
+import SearchIcon from '@assets/icons/search.svg';
 
 import UserIcon from '@assets/images/user-icon.svg';
 
@@ -44,9 +45,11 @@ export function Home() {
     <S.HomeSafe>
       <S.HomeContainer>
         <S.HomeHeader>
-          <DokiInput leftIcon={searchIcon} name="search" placeholder='Search Doki Doki' />
+          <DokiInput leftIcon={SearchIcon} name="search" placeholder='Search Doki Doki' />
 
-          <UserIcon width={RFValue(64)} height={RFValue(64)} style={{ marginLeft: RFValue(8) }} />
+          <S.HomeHeaderButton activeOpacity={0.8} onPress={() => navigate('Profile')}>
+            <UserIcon width={RFValue(64)} height={RFValue(64)} style={{ marginLeft: RFValue(8) }} />
+          </S.HomeHeaderButton>
         </S.HomeHeader>
 
         <S.HomeSection>

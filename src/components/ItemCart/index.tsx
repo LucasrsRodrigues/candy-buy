@@ -10,15 +10,17 @@ interface ItemCartProps {
     image: string;
     price: number;
     quantity: number;
-  }
+  },
+  image: string;
 }
 
-export function ItemCart({ product }: ItemCartProps) {
+export function ItemCart({ product, image }: ItemCartProps) {
   const { addCartItem } = useCart();
+  // const sourceImage = require(`../../../assets/foods/${image}`);
 
   return (
     <S.ItemCart>
-      <S.ItemCartImage source={product.image} />
+      {/* <S.ItemCartImage source={sourceImage} /> */}
 
       <S.ItemCartInfos>
         <S.ItemCartTitle>{product.name}</S.ItemCartTitle>
