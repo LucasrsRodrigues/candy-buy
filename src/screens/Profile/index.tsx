@@ -4,7 +4,7 @@ import ProfilePic from '@assets/images/user-avatar.svg';
 
 import { RFValue } from 'react-native-responsive-fontsize';
 import { DokiButton } from '@components/DokiButton';
-import { Octicons } from '@expo/vector-icons';
+import { Octicons, FontAwesome, MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
 
 import UnicornBoia from '@assets/images/unicornio_boia.svg';
@@ -12,9 +12,11 @@ import UnicornBoia from '@assets/images/unicornio_boia.svg';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 import * as S from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export function Profile() {
   const theme = useTheme();
+  const { navigate } = useNavigation();
 
   return (
     <S.ProfileSafe>
@@ -38,7 +40,7 @@ export function Profile() {
               Become a pro member and {'\n'}
               unlock premium benefits.
             </S.PremiumLabel>
-            <DokiButton label='Learn More' rightIcon='chevron-right' />
+            <DokiButton label='Learn More' rightIcon='chevron-right' onPress={() => navigate('Membership')} />
           </S.PremiumLeft>
 
           <S.PremiumRight>
@@ -46,26 +48,32 @@ export function Profile() {
           </S.PremiumRight>
         </S.Premium>
 
-        <S.ProfileOption>
+        <S.ProfileOption onPress={() => navigate('EditProfile')}>
           <FontAwesome5 name="user-alt" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>Edit Profile</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>
 
         <S.ProfileOption>
-          <FontAwesome5 name="user-alt" size={24} color={theme.colors.grey_60} />
+          <FontAwesome5 name="shopping-basket" size={24} color={theme.colors.grey_60} />
+          <S.ProfileLabel>My Orders</S.ProfileLabel>
+          <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
+        </S.ProfileOption>
+
+        <S.ProfileOption>
+          <FontAwesome name="credit-card-alt" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>Payments</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>
 
         <S.ProfileOption>
-          <FontAwesome5 name="user-alt" size={24} color={theme.colors.grey_60} />
+          <MaterialIcons name="location-on" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>Addresses</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>
 
         <S.ProfileOption>
-          <FontAwesome5 name="user-alt" size={24} color={theme.colors.grey_60} />
+          <Ionicons name="log-out" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>Log Out</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>

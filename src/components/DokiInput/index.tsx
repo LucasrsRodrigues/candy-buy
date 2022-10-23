@@ -28,7 +28,7 @@ export function DokiInput({ name, leftIcon: LeftIcon, rightIcon: RightIcon, ...p
     <S.DokInputContainer isFocused={isFocused} isErrored={!!error}>
 
       {LeftIcon && (
-        <LeftIcon />
+        <LeftIcon style={{ marginLeft: 16 }} />
       )}
 
       {/* Icone */}
