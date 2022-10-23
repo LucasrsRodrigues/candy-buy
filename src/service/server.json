@@ -99,5 +99,37 @@
       "total": "10.28",
       "hora": "3:56 PM, Jan 23"
     }
+  ],
+  "payments": [
+    {
+      "id": "0",
+      "cardNumber": "9683 2423 5987 3452",
+      "cardName": "Salman Khan",
+      "cardDate": "02/2024"
+    },
+    {
+      "id": "1",
+      "cardNumber": "7895 5939 0094 2322",
+      "cardName": "Salman Khan",
+      "cardDate": "04/2022"
+    },
+    {
+      "id": "2",
+      "cardNumber": "3534 5553 3223 7732",
+      "cardName": "Mujeeb Khan",
+      "cardDate": "01/2023"
+    },
+    {
+      "id": "3",
+      "cardNumber": "3453 5443 3987 1030",
+      "cardName": "Mujeeb Khan",
+      "cardDate": "07/2029"
+    },
+    {
+      "id": "4",
+      "cardNumber": "5688 5433 4451 1192",
+      "cardName": "Mujeeb Khan",
+      "cardDate": "05/2023"
+    }
   ]
 }

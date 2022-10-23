@@ -60,7 +60,7 @@ export function Profile() {
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>
 
-        <S.ProfileOption>
+        <S.ProfileOption onPress={() => navigate('Payments')}>
           <FontAwesome name="credit-card-alt" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>Payments</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
