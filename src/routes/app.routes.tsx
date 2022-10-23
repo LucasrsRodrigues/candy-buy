@@ -6,6 +6,7 @@ import { Cart } from '@screens/Cart';
 import { Profile } from '@screens/Profile';
 import { Membership } from '@screens/Membership';
 import { EditProfile } from '@screens/EditProfile';
+import { MyOrders } from '@screens/MyOrders';
 
 
 const { Navigator, Screen } = createNativeStackNavigator();
@@ -23,6 +24,7 @@ export function AppRoutes() {
       <Screen name="Profile" component={Profile} />
       <Screen name="Membership" component={Membership} />
       <Screen name="EditProfile" component={EditProfile} />
+      <Screen name="MyOrders" component={MyOrders} />
     </Navigator>
   );
 }

@@ -51,5 +51,53 @@
       "image": "Super_Simple.png",
       "price": 3.99
     }
+  ],
+  "orders": [
+    {
+      "id": "0",
+      "status": "delivered",
+      "itens": [
+        {
+          "id": "0",
+          "name": "Classic Donut",
+          "price": 3.99,
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Classic Purple",
+          "price": 4.49,
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Green Vanilla",
+          "price": 2.99,
+          "quantity": 1
+        }
+      ],
+      "total": "11.47",
+      "hora": "4:52 PM, Jan 25"
+    },
+    {
+      "id": "1",
+      "status": "delivered",
+      "itens": [
+        {
+          "id": "0",
+          "name": "Chocolate Shake",
+          "price": 7.99,
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Fruity Browniw",
+          "price": 2.29,
+          "quantity": 1
+        }
+      ],
+      "total": "10.28",
+      "hora": "3:56 PM, Jan 23"
+    }
   ]
 }

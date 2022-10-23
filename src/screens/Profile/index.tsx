@@ -54,7 +54,7 @@ export function Profile() {
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>
 
-        <S.ProfileOption>
+        <S.ProfileOption onPress={() => navigate('MyOrders')}>
           <FontAwesome5 name="shopping-basket" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>My Orders</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
