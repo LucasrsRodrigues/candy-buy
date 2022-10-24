@@ -66,6 +66,7 @@ export default {
   fonts: {
     body_regular: 'Nunito_400Regular',
     body_bold: 'Nunito_700Bold',
+    body_extra_bold: 'Nunito_800ExtraBold',
     fredoka_regular: 'Fredoka-Regular',
     fredoka_bold: 'Fredoka-Bold',
     fredokaOne: 'FredokaOne-Regular',

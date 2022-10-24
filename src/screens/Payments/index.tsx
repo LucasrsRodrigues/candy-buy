@@ -1,40 +1,43 @@
+import React, { useEffect, useState } from 'react';
 import { InternalHeader } from '@components/InternalHeader';
-import React from 'react';
-import EditSvg from '@assets/icons/Pencil.svg';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { PaymentsCard } from './components/PaymentsCard';
+
 import * as S from './styles';
-import { RFValue } from 'react-native-responsive-fontsize';
+import api from 'src/service/api';
+import { DokiButton } from '@components/DokiButton';
+import { ListPaymentsCard } from './components/ListPaymentsCard';
+import { NoSavedCards } from './components/NoSavedCards';
+
+interface PaymentsProps {
+  id: string;
+  cardNumber: string;
+  cardName: string;
+  cardDate: string;
+  isDefault: boolean;
+}
 
 export function Payments() {
+  const [payments, setPayments] = useState<PaymentsProps[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await api.get('/payments');
+      setPayments(response.data);
+    })();
+  }, []);
+
+
   return (
     <S.PaymentsSafe>
       <InternalHeader label="Payments" />
+      <S.PaymentsContent>
 
-      <S.PaymentsContainer>
+        <S.PaymentsContainer>
+          {payments.length > 0 ? (<ListPaymentsCard payments={payments} />) : (<NoSavedCards />)}
+        </S.PaymentsContainer>
 
-        <S.PaymentsCard>
-          <S.PaymentsCheck>
-            <S.PaymentsCircle>
-              <S.PaymentsDot />
-            </S.PaymentsCircle>
-          </S.PaymentsCheck>
-
-          <S.PaymentsInfos>
-            <S.PaymentsCardNumber>9683 2423 5987 3452</S.PaymentsCardNumber>
-
-            <S.PaymentsWrapper>
-              <S.PaymentsInfosName>Salman Khan</S.PaymentsInfosName>
-              <S.PaymentsInfosDate>02/2024</S.PaymentsInfosDate>
-            </S.PaymentsWrapper>
-
-          </S.PaymentsInfos>
-
-          <S.PaymentsEdit>
-            <MaterialCommunityIcons name="pencil" size={24} color="black" />
-          </S.PaymentsEdit>
-        </S.PaymentsCard>
-
-      </S.PaymentsContainer>
+        <DokiButton label='Add New Card' />
+      </S.PaymentsContent>
     </S.PaymentsSafe>
   );
 }

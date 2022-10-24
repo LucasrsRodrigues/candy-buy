@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import {
   Nunito_400Regular,
   Nunito_700Bold,
+  Nunito_800ExtraBold,
 } from '@expo-google-fonts/nunito';
 
 import {
@@ -33,6 +34,7 @@ export default function App() {
     'FredokaOne-Regular': require('./src/assets/fonts/FredokaOne-Regular.ttf'),
     Nunito_400Regular,
     Nunito_700Bold,
+    Nunito_800ExtraBold,
     Baloo2_500Medium,
     Baloo2_400Regular,
     Baloo2_600SemiBold,
