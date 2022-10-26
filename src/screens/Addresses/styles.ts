@@ -19,3 +19,12 @@ export const AddressesSelected = styled.View`
 
 export const AddressesSelectedName = styled.Text``;
 export const AddressesSelectedNumber = styled.Text``;
+
+export const AddressesTitle = styled.Text`
+  font-size: ${RFValue(20)}px;
+  font-family: ${({ theme }) => theme.fonts.fredokaOne};
+  color: ${({ theme }) => theme.colors.typography_title};
+
+  margin-top: 24px;
+`;
+

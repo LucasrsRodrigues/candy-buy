@@ -10,6 +10,7 @@ import { MyOrders } from '@screens/MyOrders';
 import { Payments } from '@screens/Payments';
 import { Addresses } from '@screens/Addresses';
 import { AddNewCard } from '@screens/AddNewCard';
+import { EditAddress } from '@screens/EditAddress';
 
 
 const { Navigator, Screen } = createNativeStackNavigator();
@@ -31,6 +32,7 @@ export function AppRoutes() {
       <Screen name="Payments" component={Payments} />
       <Screen name="Addresses" component={Addresses} />
       <Screen name="AddNewCard" component={AddNewCard} />
+      <Screen name="EditAddress" component={EditAddress} />
     </Navigator>
   );
 }

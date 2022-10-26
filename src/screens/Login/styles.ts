@@ -20,7 +20,8 @@ export const LoginLorem = styled.View`
 `;
 
 export const LoginForm = styled.View`
-  /* width: 100%;   */
+  width: 100%;  
+  /* flex: 1; */
 `;
 
 export const LoginLoremTitle = styled.Text`
