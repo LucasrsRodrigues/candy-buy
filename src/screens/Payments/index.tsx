@@ -7,6 +7,7 @@ import api from 'src/service/api';
 import { DokiButton } from '@components/DokiButton';
 import { ListPaymentsCard } from './components/ListPaymentsCard';
 import { NoSavedCards } from './components/NoSavedCards';
+import { useNavigation } from '@react-navigation/native';
 
 interface PaymentsProps {
   id: string;
@@ -17,6 +18,7 @@ interface PaymentsProps {
 }
 
 export function Payments() {
+  const { navigate } = useNavigation();
   const [payments, setPayments] = useState<PaymentsProps[]>([]);
 
   useEffect(() => {
@@ -25,6 +27,7 @@ export function Payments() {
       setPayments(response.data);
     })();
   }, []);
+
 
 
   return (
@@ -36,7 +39,7 @@ export function Payments() {
           {payments.length > 0 ? (<ListPaymentsCard payments={payments} />) : (<NoSavedCards />)}
         </S.PaymentsContainer>
 
-        <DokiButton label='Add New Card' />
+        <DokiButton label='Add New Card' onPress={() => navigate('AddNewCard')} />
       </S.PaymentsContent>
     </S.PaymentsSafe>
   );

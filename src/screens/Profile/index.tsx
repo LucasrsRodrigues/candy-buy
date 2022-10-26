@@ -13,8 +13,10 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 import * as S from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from 'src/hooks/auth.hook';
 
 export function Profile() {
+  const { signOut } = useAuth();
   const theme = useTheme();
   const { navigate } = useNavigation();
 
@@ -66,13 +68,13 @@ export function Profile() {
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>
 
-        <S.ProfileOption>
+        <S.ProfileOption onPress={() => navigate('Addresses')}>
           <MaterialIcons name="location-on" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>Addresses</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />
         </S.ProfileOption>
 
-        <S.ProfileOption>
+        <S.ProfileOption onPress={signOut}>
           <Ionicons name="log-out" size={24} color={theme.colors.grey_60} />
           <S.ProfileLabel>Log Out</S.ProfileLabel>
           <Octicons name="chevron-right" size={RFValue(20)} color={theme.colors.grey_20} style={{ marginLeft: 'auto' }} />

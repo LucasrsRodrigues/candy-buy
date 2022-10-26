@@ -19,7 +19,9 @@ export const LoginLorem = styled.View`
   align-items: center;
 `;
 
-export const LoginForm = styled.View``;
+export const LoginForm = styled.View`
+  /* width: 100%;   */
+`;
 
 export const LoginLoremTitle = styled.Text`
   text-align: center;

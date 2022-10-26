@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 export const Button = styled.TouchableOpacity<ButtonProps>`
-  /* width: 100%; */
+  width: 100%;
   padding: 19.5px;
   border-radius: 12px;
 
@@ -21,13 +21,12 @@ export const Button = styled.TouchableOpacity<ButtonProps>`
   align-items: center;
 `;
 
-export const ButtonIcon = styled.Image`
-  /* filter: brightness(0) invert(1); */
-`;
 
 export const ButtonText = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.fredoka_bold};
   font-size: 18px;
   text-align: center;
+
+  flex: 1;
 `;
