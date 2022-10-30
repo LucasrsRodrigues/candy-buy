@@ -28,7 +28,7 @@ export function FinishRegister() {
         </S.FinishRegisterWrapper>
 
         <S.FinishRegisterWrapper>
-          <DokiButton label="Let's go" onPress={() => navigate('Code')} />
+          <DokiButton label="Let's go" onPress={() => navigate('Login')} />
         </S.FinishRegisterWrapper>
       </S.FinishRegisterContainer>
     </S.FinishRegisterSafe>

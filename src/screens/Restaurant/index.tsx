@@ -45,9 +45,8 @@ export function Restaurant() {
 
           {itens.map(iten => (
             <ItemCart
-              key={iten.id}
+              key={String(iten.id)}
               product={iten}
-              image={iten.image}
             />
           ))}
           {/* '@assets/foods/Super_Simple.png' */}

@@ -4,7 +4,7 @@ import styled from "styled-components/native";
 export const InternalHeaderContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  /* padding: 20px; */
 
   align-items: center;
 `;

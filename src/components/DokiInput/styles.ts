@@ -6,11 +6,12 @@ import theme from "../../global/styles/theme";
 interface ContainerProps {
   isFocused: boolean;
   isErrored: boolean;
+  flex: boolean;
 }
+
 
 export const DokInputContainer = styled.View<ContainerProps>`
   width: 100%;
-  /* flex: 1; */
   background: ${({ theme }) => theme.colors.white};
   height: ${RFValue(64)}px;
 
@@ -31,8 +32,12 @@ export const DokInputContainer = styled.View<ContainerProps>`
       border-color: ${({ theme }) => theme.colors.grey_20};
     `};
 
-`;
+    ${props => props.flex
+    && css`
+        flex: 1;
+    `};
 
+`;
 
 export const DockTextInput = styled.TextInput.attrs({
   placeholderTextColor: theme.colors.typography_subtitle

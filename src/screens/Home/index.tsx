@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DokiInput } from '@components/DokiInput';
 
 import SearchIcon from '@assets/icons/search.svg';
@@ -9,6 +9,7 @@ import * as S from './styles';
 import { RFValue } from 'react-native-responsive-fontsize';
 import HeartSvg from '@assets/images/heart.svg';
 import { useNavigation } from '@react-navigation/native';
+import { useCart } from 'src/hooks/cart.hook';
 
 const candies = [
   {
@@ -40,12 +41,17 @@ const candies = [
 
 export function Home() {
   const { navigate } = useNavigation();
+  const { setShow } = useCart();
+
+  useEffect(() => {
+    setShow(true);
+  }, [])
 
   return (
     <S.HomeSafe>
       <S.HomeContainer>
         <S.HomeHeader>
-          <DokiInput leftIcon={SearchIcon} name="search" placeholder='Search Doki Doki' />
+          <DokiInput leftIcon={SearchIcon} name="search" placeholder='Search Doki Doki' flex />
 
           <S.HomeHeaderButton activeOpacity={0.8} onPress={() => navigate('Profile')}>
             <UserIcon width={RFValue(64)} height={RFValue(64)} style={{ marginLeft: RFValue(8) }} />

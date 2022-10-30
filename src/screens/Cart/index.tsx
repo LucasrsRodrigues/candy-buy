@@ -1,20 +1,25 @@
 import { DokiButton } from '@components/DokiButton';
 import { InternalHeader } from '@components/InternalHeader';
 import { ItemCart } from '@components/ItemCart';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCart } from 'src/hooks/cart.hook';
 
 import * as S from './styles';
 
 export function Cart() {
-  const { itens } = useCart();
+  const { itens, setShow } = useCart();
+
+  useEffect(() => {
+    setShow(false);
+  }, []);
+
 
   return (
     <S.CartSafe>
       <InternalHeader label="You Bags" />
 
       <S.CartContainer>
-        {itens.map(iten => <ItemCart key={iten.id} product={iten} />)}
+        {/* {itens.map(iten => <ItemCart key={String(iten.id)} product={iten} />)} */}
       </S.CartContainer>
 
       <S.CartInfo>
@@ -30,6 +35,7 @@ export function Cart() {
           <S.CartSubtextStrong>Total</S.CartSubtextStrong>
           <S.CartValueStrong>151.98</S.CartValueStrong>
         </S.CartInfoRow>
+
         <DokiButton label="Secure Checkout" />
       </S.CartInfo>
     </S.CartSafe>

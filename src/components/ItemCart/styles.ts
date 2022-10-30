@@ -11,11 +11,11 @@ export const ItemCart = styled.View`
 `;
 
 export const ItemCartImage = styled.Image`
-  background: ${({ theme }) => theme.colors.white};
+  /* background: ${({ theme }) => theme.colors.white}; */
   width: ${RFValue(52)}px;
   height: ${RFValue(52)}px;
 
-  border-radius: ${RFValue(12)}px;
+  /* border-radius: ${RFValue(12)}px; */
 `;
 
 

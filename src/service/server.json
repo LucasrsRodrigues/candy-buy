@@ -12,43 +12,43 @@
     {
       "id": "0",
       "name": "Classic Donut",
-      "image": "Super_Simple.png",
+      "image": "https://i.imgur.com/bDFKAJe.png",
       "price": 3.99
     },
     {
       "id": "1",
       "name": "Chocolate n Cream",
-      "image": "Super_Simple.png",
+      "image": "https://i.imgur.com/siB46N2.png",
       "price": 3.99
     },
     {
       "id": "2",
       "name": "Classic Red",
-      "image": "Super_Simple.png",
+      "image": "https://i.imgur.com/mOTJVJR.png",
       "price": 3.99
     },
     {
       "id": "3",
       "name": "Classic Purple",
-      "image": "Super_Simple.png",
+      "image": "https://i.imgur.com/wYtscum.png",
       "price": 3.99
     },
     {
       "id": "4",
       "name": "Broken Heart",
-      "image": "Super_Simple.png",
+      "image": "https://i.imgur.com/sL44hCc.png",
       "price": 3.99
     },
     {
       "id": "5",
       "name": "Green Vanilla",
-      "image": "Super_Simple.png",
+      "image": "https://i.imgur.com/w3J43X1.png",
       "price": 3.99
     },
     {
       "id": "6",
       "name": "Space Blue",
-      "image": "Super_Simple.png",
+      "image": "https://i.imgur.com/SOxsuv7.png",
       "price": 3.99
     }
   ],

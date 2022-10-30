@@ -6,7 +6,6 @@ import Doki from '@assets/images/doki-doki/forgotPasswordChild.svg';
 // import phoneIcon from '@assets/icons/phone/phone.png';
 
 import * as S from './styles';
-import { Dokinput } from '@components/DokInput';
 import { DokiButton } from '@components/DokiButton';
 import { useNavigation } from '@react-navigation/native';
 

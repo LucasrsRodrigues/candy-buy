@@ -8,9 +8,10 @@ interface DokiInputProps extends TextInputProps {
   name: string;
   leftIcon?: React.FC<SvgProps>;
   rightIcon?: React.FC<SvgProps>;
+  flex?: boolean;
 }
 
-export function DokiInput({ name, leftIcon: LeftIcon, rightIcon: RightIcon, ...props }: DokiInputProps) {
+export function DokiInput({ name, leftIcon: LeftIcon, rightIcon: RightIcon, flex = false, ...props }: DokiInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const error = false;
 
@@ -25,7 +26,7 @@ export function DokiInput({ name, leftIcon: LeftIcon, rightIcon: RightIcon, ...p
   }, []);
 
   return (
-    <S.DokInputContainer isFocused={isFocused} isErrored={!!error}>
+    <S.DokInputContainer isFocused={isFocused} isErrored={!!error} flex={flex}>
 
       {LeftIcon && (
         <LeftIcon style={{ marginLeft: 16 }} />
@@ -37,6 +38,7 @@ export function DokiInput({ name, leftIcon: LeftIcon, rightIcon: RightIcon, ...p
         onBlur={handleInputBlur}
         autoCapitalize='none'
         placeholderTextColor='#66615C'
+
         {...props}
       />
 
