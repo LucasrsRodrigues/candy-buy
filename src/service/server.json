@@ -5,7 +5,9 @@
       "name": "lucas rodrigues santos",
       "email": "email@email.com",
       "cpf": "510.669.200-87",
-      "token": "b1213ee0-4e76-11ed-bdc3-0242ac120002"
+      "phone": "+91 12234 57789",
+      "token": "b1213ee0-4e76-11ed-bdc3-0242ac120002",
+      "password": "123456"
     }
   ],
   "itens": [
@@ -135,6 +137,32 @@
       "cardName": "Mujeeb Khan",
       "cardDate": "05/2023",
       "isDefault": false
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "0",
+      "time": "15-25",
+      "name": "Donuts Shop",
+      "description": "Classis, broken hear and more tasty donuts",
+      "image": "https://i.imgur.com/dV2xFu8.png",
+      "isFavorite": true
+    },
+    {
+      "id": "1",
+      "time": "35-45",
+      "name": "Creamy Cakes",
+      "description": "Cupcakes, buns, cherries, and decorative cakes",
+      "image": "https://i.imgur.com/iaYGyM7.png",
+      "isFavorite": true
+    },
+    {
+      "id": "2",
+      "time": "25-35",
+      "name": "The Candy Fair",
+      "description": "Sweets, candies, nuts, chocolates, and shakes",
+      "image": "https://i.imgur.com/3lQKwCx.png",
+      "isFavorite": false
     }
   ]
 }

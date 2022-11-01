@@ -38,7 +38,6 @@ export function DokiInput({ name, leftIcon: LeftIcon, rightIcon: RightIcon, flex
         onBlur={handleInputBlur}
         autoCapitalize='none'
         placeholderTextColor='#66615C'
-
         {...props}
       />
 

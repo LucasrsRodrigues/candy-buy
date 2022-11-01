@@ -7,6 +7,8 @@ type User = {
   email: string;
   cpf: string;
   token: string;
+  phone: string;
+  password: string;
 }
 interface SignInCredentials {
   email: string;
@@ -41,7 +43,8 @@ function AuthProvider({ children }: AuthProviderProps) {
       name: 'lucas rodrigues santos',
       email: 'email@email.com',
       cpf: '510.669.200-87',
-      token: 'b1213ee0-4e76-11ed-bdc3-0242ac120002'
+      token: 'b1213ee0-4e76-11ed-bdc3-0242ac120002',
+      password: '123'
     };
 
     const access_token = 'd26ef2178a6ba55c3b5c839b834646dc';
