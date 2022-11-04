@@ -32,14 +32,17 @@ export function Payments() {
 
   return (
     <S.PaymentsSafe>
-      <InternalHeader label="Payments" />
+      <S.PaymentsWrapper>
+        <InternalHeader label="Payments" />
+      </S.PaymentsWrapper>
+
       <S.PaymentsContent>
 
         <S.PaymentsContainer>
           {payments.length > 0 ? (<ListPaymentsCard payments={payments} />) : (<NoSavedCards />)}
         </S.PaymentsContainer>
 
-        <DokiButton label='Add New Card' onPress={() => navigate('AddNewCard')} />
+        <DokiButton label='Add New Card' onPress={() => navigate('AddNewCard')} style={{ marginTop: 'auto' }} />
       </S.PaymentsContent>
     </S.PaymentsSafe>
   );

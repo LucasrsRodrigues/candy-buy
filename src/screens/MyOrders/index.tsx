@@ -33,7 +33,9 @@ export function MyOrders() {
 
   return (
     <S.MyOrdersSafe>
-      <InternalHeader label="My Orders" />
+      <S.MyOrdersWrapper>
+        <InternalHeader label="My Orders" />
+      </S.MyOrdersWrapper>
 
       <S.MyOrdersContainer>
         {orders.length > 0 ? (<OrdersContainer orders={orders} />) : (<NoPreviousOrders />)}
