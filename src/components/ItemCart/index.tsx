@@ -14,7 +14,7 @@ interface ItemCartProps {
 }
 
 export function ItemCart({ product }: ItemCartProps) {
-  const { addCartItem } = useCart();
+  const { addItemCart } = useCart();
 
 
   return (
@@ -25,7 +25,7 @@ export function ItemCart({ product }: ItemCartProps) {
         <S.ItemCartPrice>R$ {product.price}</S.ItemCartPrice>
       </S.ItemCartInfos>
 
-      <S.ItemCartButton onPress={() => addCartItem(product)}>
+      <S.ItemCartButton onPress={() => addItemCart(product)}>
         <S.ItemCartButtonText>Add</S.ItemCartButtonText>
       </S.ItemCartButton>
     </S.ItemCart>

@@ -60,6 +60,4 @@ export const HomeCandyImage = styled.Image`
   height: ${RFValue(44)}px;
 `;
 
-export const HomeWrapperCard = styled.View`
-  margin-top: ${RFValue(12)}px;
-`;
+

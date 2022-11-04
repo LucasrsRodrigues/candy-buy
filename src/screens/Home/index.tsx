@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { DokiInput } from '@components/DokiInput';
 
 import SearchIcon from '@assets/icons/search.svg';
@@ -11,6 +11,9 @@ import { useNavigation } from '@react-navigation/native';
 import { useCart } from 'src/hooks/cart.hook';
 import api from 'src/service/api';
 import { HomeRestaurantCard } from './components/HomeRestaurantCard';
+import { SEHomeRestaurantCard } from './components/SEHomeRestaurantCard';
+import { ShimmerRestaurantCard } from './components/ShimmerRestaurantCard';
+import { RestaurantsList } from './components/RestaurantsList';
 
 const candies = [
   {
@@ -50,17 +53,18 @@ interface RestaurantsProps {
 }
 
 export function Home() {
-  const { navigate } = useNavigation();
-  const { setShow } = useCart();
+  const [loading, setLoading] = useState(true);
   const [restaurants, setRestaurants] = useState<RestaurantsProps[]>([]);
+
+  const { navigate } = useNavigation();
 
   async function getRestaurants() {
     const response = await api.get('/restaurants');
     setRestaurants(response.data);
+    setLoading(false);
   }
 
   useEffect(() => {
-    setShow(true);
     getRestaurants();
   }, []);
 
@@ -95,11 +99,10 @@ export function Home() {
         <S.HomeSection>
           <S.HomeHero>Nearby Restaurants</S.HomeHero>
 
-          {restaurants.map(restaurant => (
-            <S.HomeWrapperCard>
-              <HomeRestaurantCard restaurant={restaurant} />
-            </S.HomeWrapperCard>
-          ))}
+          {loading ? (
+            <ShimmerRestaurantCard />
+          ) : <RestaurantsList restaurants={restaurants} />}
+
         </S.HomeSection>
       </S.HomeContainer>
     </S.HomeSafe>

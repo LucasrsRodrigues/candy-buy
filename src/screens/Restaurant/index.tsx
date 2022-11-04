@@ -4,15 +4,11 @@ import Unicorn from '@assets/images/random/unicorn.svg';
 import { InternalHeader } from '@components/InternalHeader';
 import { ItemCart } from '@components/ItemCart';
 
-import { useCart } from 'src/hooks/cart.hook';
-
 import api from 'src/service/api';
 import * as S from './styles';
 
-
 export function Restaurant() {
   const [itens, setItens] = useState([]);
-  const { addCartItem } = useCart();
 
   async function getItens() {
     const response = await api.get('/itens');
@@ -49,7 +45,6 @@ export function Restaurant() {
               product={iten}
             />
           ))}
-          {/* '@assets/foods/Super_Simple.png' */}
         </S.RestaurantBestsellers>
       </S.RestaurantContainer>
     </S.RestaurantSafe>

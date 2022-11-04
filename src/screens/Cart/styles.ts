@@ -6,10 +6,17 @@ export const CartSafe = styled.SafeAreaView`
   background: ${({ theme }) => theme.colors.default};
 `;
 
+export const CartWrapper = styled.View`
+  padding: 15px 24px;
+`;
+
 export const CartContainer = styled.ScrollView`
   padding: 20px;
 `;
 
+export const CartInfoSpace = styled.View`
+  margin: ${RFValue(5)}px 0;
+`;
 
 export const CartInfo = styled.View`
   width: 100%;

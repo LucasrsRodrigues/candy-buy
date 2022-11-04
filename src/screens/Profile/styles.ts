@@ -1,6 +1,9 @@
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
 
+export const ProfileWrapper = styled.View`
+    padding: 15px 24px;
+`;
 
 export const ProfileSafe = styled.SafeAreaView`
   flex:1;

@@ -8,14 +8,17 @@ import { Octicons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
 
 import * as S from './styles';
+import { useCart } from 'src/hooks/cart.hook';
 
 interface InternalHeaderProps {
   label: string;
   showHeart?: boolean;
+  isFavorite?: boolean;
 }
 
-export function InternalHeader({ label, showHeart = false }: InternalHeaderProps) {
+export function InternalHeader({ label, isFavorite = false, showHeart = false }: InternalHeaderProps) {
   const { goBack } = useNavigation();
+
   const theme = useTheme();
 
   return (
@@ -28,7 +31,7 @@ export function InternalHeader({ label, showHeart = false }: InternalHeaderProps
 
       {showHeart && (
         <S.InternalHeaderBackButton>
-          <Octicons name="heart" size={24} color={theme.colors.orange_60} />
+          <Octicons name={isFavorite ? "heart" : "heart-fill"} size={24} color={theme.colors.orange_60} />
         </S.InternalHeaderBackButton>
       )}
 

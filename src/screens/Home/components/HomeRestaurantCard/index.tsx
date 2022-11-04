@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components/native';
 import * as S from './styles';
 import api from 'src/service/api';
+import { SEHomeRestaurantCard } from '../SEHomeRestaurantCard';
 
 
 interface HomeRestaurantCardProps {
@@ -20,6 +21,7 @@ interface HomeRestaurantCardProps {
 }
 
 export function HomeRestaurantCard({ restaurant }: HomeRestaurantCardProps) {
+
   const [data, setData] = useState(restaurant);
 
   const { navigate } = useNavigation();

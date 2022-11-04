@@ -1,29 +1,27 @@
-import React, { Fragment } from 'react';
-import { AntDesign } from '@expo/vector-icons';
+import React from 'react';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { Feather } from '@expo/vector-icons';
+
 import * as S from './styles';
-import { RFValue } from 'react-native-responsive-fontsize';
 import { useCart } from 'src/hooks/cart.hook';
-import { useNavigation } from '@react-navigation/native';
 
 export function CartDiv() {
-  const { quantity, show } = useCart();
   const { navigate } = useNavigation();
+  const { getQuantityItens, showCart } = useCart();
 
-  if (show) {
-    return (
-      <S.CartDivContainer activeOpacity={0.8} onPress={() => navigate('Cart')}>
-        <S.CartDivQuantity>{quantity}x Items</S.CartDivQuantity>
-
-        <S.CartDivButton>
-          <S.CartDivButtonText>View Bag</S.CartDivButtonText>
-          <AntDesign name="right" size={RFValue(16)} color="#fff" />
-        </S.CartDivButton>
-      </S.CartDivContainer>
-    );
+  if (getQuantityItens() === 0 || !showCart) {
+    return null;
   }
 
   return (
-    <Fragment />
-  )
+    <S.CartDivContainer activeOpacity={0.8} onPress={() => navigate('Cart')}>
+      <S.CartDivQuantityContainer>
+        <S.CartDivQuantity>{getQuantityItens()}</S.CartDivQuantity>
+      </S.CartDivQuantityContainer>
 
+      <S.CartDivButton>
+        <Feather name="shopping-cart" size={24} color="#fff" />
+      </S.CartDivButton>
+    </S.CartDivContainer>
+  )
 }

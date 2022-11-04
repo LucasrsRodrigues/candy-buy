@@ -22,7 +22,10 @@ export function Profile() {
 
   return (
     <S.ProfileSafe>
-      <InternalHeader label='Profile' />
+      <S.ProfileWrapper>
+        <InternalHeader label='Profile' />
+      </S.ProfileWrapper>
+
       <S.ProfileContainer>
         <S.ProfileData>
           <S.ProfileAvatar>
