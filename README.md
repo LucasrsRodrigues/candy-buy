@@ -14,7 +14,7 @@
 </p>
 
 <h2 id="objective" > 🎯 Objetivo </h2>
-Encontre aquele doce gostoso após o almoço! O <a href="https://cand-buy-web.vercel.app/">Doki Doki</a> foi desenvolvido para . 
+Encontre aquele doce gostoso após o almoço! O <a href="https://cand-buy-web.vercel.app/">Doki Doki</a> foi desenvolvido para venda de doces. 
 
 <h2 id="technologies"> 🛠 Tecnologias </h2>
 
