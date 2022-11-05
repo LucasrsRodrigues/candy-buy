@@ -20,7 +20,7 @@ Encontre aquele doce gostoso após o almoço! O <a href="https://cand-buy-web.ve
 
 As seguintes ferramentas foram utilizadas na construção do projeto:
 - [React Native](https://reactnative.dev/)
-- [React Native](https://expo.dev/)
+- [Expo](https://expo.dev/)
 - [JSON Server](https://github.com/typicode/json-server)
 - [Yarn](https://yarnpkg.com)
 - [VSCode](https://code.visualstudio.com)
