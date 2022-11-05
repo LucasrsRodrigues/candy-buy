@@ -13,6 +13,7 @@ import { AddNewCard } from '@screens/AddNewCard';
 import { EditAddress } from '@screens/EditAddress';
 import { Shipping } from '@screens/Shipping';
 import { useCart } from 'src/hooks/cart.hook';
+import { EditAddresses } from '@screens/EditAddresses';
 
 
 const { Navigator, Screen } = createNativeStackNavigator();

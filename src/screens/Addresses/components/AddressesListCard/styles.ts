@@ -24,6 +24,8 @@ export const AddressesListInf = styled.Text`
   margin-top: ${RFValue(4)}px;
   font-family: ${({ theme }) => theme.fonts.body_bold};
   color:${({ theme }) => theme.colors.typography_paragraph};
+
+  max-width: 265px;
 `;
 
 

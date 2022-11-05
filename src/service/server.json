@@ -164,5 +164,21 @@
       "image": "https://i.imgur.com/3lQKwCx.png",
       "isFavorite": false
     }
+  ],
+  "addresses": [
+    {
+      "id": "0",
+      "name": "Home",
+      "phone": "+91 12234 57789",
+      "info": "33k Opposite Fun Mall, Vibhuti Khand, Lucknow, U P",
+      "isDefault": true
+    },
+    {
+      "id": "1",
+      "name": "Job",
+      "phone": "+91 13106 63990",
+      "info": "340-272 South St, Newark, NJ 07114, EUA",
+      "isDefault": false
+    }
   ]
 }
