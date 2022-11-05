@@ -44,7 +44,7 @@ $ yarn
 $ expo start
 
 # Acesse o aplicaivo atraves do seu emulador de preferência
-http://localhost:3000
+
 ```
 <h2 id="contribution"> 🤝 Contribuição </h2>
 Este projeto é para fins de estudo, então me mande uma mensagem me contando o que você está fazendo e por que está fazendo, me ensine o que você sabe. Todos os tipos de contribuições são muito bem-vindos e apreciados!
