@@ -43,6 +43,8 @@ $ yarn
 # Rode a aplicação
 $ expo start
 
+# Rode o servidor simulado
+$ yarn server
 # Acesse o aplicaivo atraves do seu emulador de preferência
 
 ```
